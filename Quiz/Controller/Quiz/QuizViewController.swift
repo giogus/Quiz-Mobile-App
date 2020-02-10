@@ -56,6 +56,7 @@ extension QuizViewController {
     
     // This method should be called when setupUI is called. It's used to change wordTextField placeholder text with some color.
     func setupTextField(){
+        wordTextField.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         let placeholderColor = UIColor(red: 162/255, green: 162/255, blue: 162/255, alpha: 1.0)
         wordTextField.attributedPlaceholder = NSAttributedString(string: "Insert Word", attributes: [.foregroundColor: placeholderColor])
         wordTextField.delegate = self
@@ -99,6 +100,8 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil { cell = UITableViewCell(style: .default, reuseIdentifier: "cell") }
+        cell?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        cell?.textLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         cell?.textLabel?.text = viewModel?.correctWords[indexPath.row] ?? ""
         return cell ?? UITableViewCell()
     }
