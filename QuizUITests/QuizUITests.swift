@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Quiz
 
 // GS TODO: Implement UI tests.
 class QuizUITests: XCTestCase {
@@ -33,7 +32,7 @@ class QuizUITests: XCTestCase {
         app.terminate()
     }
     
-    // - [🚫] After a hit, the input box will be cleared and focus will remain on the input box.
+    // - [✅] After a hit, the input box will be cleared and focus will remain on the input box.
     
     func testAfterHitTextFieldWillBeClearedAndRemainWithFocus(){
         app.launch()
@@ -43,9 +42,10 @@ class QuizUITests: XCTestCase {
         wordTextField.tap()
         wordTextField.typeText(MockQuizModel.words[0])
         
-        sleep(2)
-        
-        XCTAssert(((wordTextField.value as? String)?.isEmpty ?? false))
+        sleep(5)
+   
+        XCTAssert(wordTextField.hasFocus())
+        wordTextField.typeText(MockQuizModel.words[1])
     }
     
     // - [✅] There will be a 5 min timer to finish the game.
@@ -85,5 +85,12 @@ class QuizUITests: XCTestCase {
         XCTAssert(alertTitleLabelExists)
         
         app.terminate()
+    }
+}
+
+extension XCUIElement {
+    func hasFocus() -> Bool {
+        let hasKeyboardFocus = (self.value(forKey: "hasKeyboardFocus") as? Bool) ?? false
+        return hasKeyboardFocus
     }
 }

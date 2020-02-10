@@ -28,6 +28,7 @@ extension UIViewController {
 // MARK: Add and Remove Child Methods for UIViewController
 extension UIViewController {
     func add(_ child: UIViewController) {
+        if self.view.subviews.contains(where: { $0 == child.view }) { return }
         child.view.alpha = 0
         UIView.transition(with: child.view, duration: 0.25, options: .transitionCrossDissolve, animations: {
             self.view.addSubview(child.view)
@@ -37,6 +38,7 @@ extension UIViewController {
     }
     
     func remove(_ child: UIViewController) {
+        if !self.view.subviews.contains(where: { $0 == child.view }) { return }
         UIView.transition(with: child.view, duration: 0.25, options: .transitionCrossDissolve, animations: {
             child.view.alpha = 0
         }, completion: { _ in
