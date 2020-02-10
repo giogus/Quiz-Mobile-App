@@ -123,6 +123,11 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="gak-KZ-kss">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
                                 <sections/>
                             </tableView>
                         </subviews>
@@ -147,6 +152,8 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="aMP-iV-HlA" id="i2D-H2-1AT"/>
+                        <outlet property="controlBackgroundBottomConstraint" destination="ggH-4p-ZMa" id="lx1-a6-gKf"/>
+                        <outlet property="controlBottomConstraint" destination="XyZ-50-tJe" id="OkP-cG-7sn"/>
                         <outlet property="correctWordsLabel" destination="jih-gR-kbk" id="k3M-tm-xcf"/>
                         <outlet property="tableView" destination="Ie5-lQ-0g5" id="8MN-sM-8Ci"/>
                         <outlet property="timeLeftLabel" destination="U15-R3-VKA" id="GCv-ut-m7V"/>
