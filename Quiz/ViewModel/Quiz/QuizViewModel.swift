@@ -64,7 +64,9 @@ extension QuizViewModel {
         self.showLoading()
         Service.request(router: Router.getQuiz) { (model: QuizModel?) in
             if let unwrappedModel = model {
-                self.hideLoading()
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+                    self.hideLoading()
+                }
                 self.model = unwrappedModel
                 self.setupQuiz()
             }
