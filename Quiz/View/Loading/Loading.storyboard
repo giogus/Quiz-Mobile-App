@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kg6-u1-82F">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="jaQ-pk-akO">
+            <objects>
+                <viewController id="Kg6-u1-82F" customClass="LoadingViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4G-Oj-ika">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zia-KD-O3d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-JR-sOO">
+                                <rect key="frame" x="107.5" y="268.5" width="160" height="130"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yrc-e4-8mi">
+                                        <rect key="frame" x="55" y="30" width="50" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Pc4-pA-tJW"/>
+                                        </constraints>
+                                        <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmq-DV-kZP">
+                                        <rect key="frame" x="16" y="85.5" width="128" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Qmq-DV-kZP" firstAttribute="leading" secondItem="4ga-JR-sOO" secondAttribute="leading" constant="16" id="4Uf-8F-hRD"/>
+                                    <constraint firstAttribute="width" constant="160" id="7bA-HQ-Qsz"/>
+                                    <constraint firstAttribute="height" constant="130" id="FxO-1F-k8d"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qmq-DV-kZP" secondAttribute="bottom" constant="24" id="RNx-HF-7Kv"/>
+                                    <constraint firstItem="yrc-e4-8mi" firstAttribute="centerX" secondItem="4ga-JR-sOO" secondAttribute="centerX" id="bkL-2v-yji"/>
+                                    <constraint firstItem="Qmq-DV-kZP" firstAttribute="centerX" secondItem="4ga-JR-sOO" secondAttribute="centerX" id="eyV-gv-4qS"/>
+                                    <constraint firstItem="yrc-e4-8mi" firstAttribute="top" secondItem="4ga-JR-sOO" secondAttribute="top" constant="30" id="fZ6-mc-dKh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qmq-DV-kZP" secondAttribute="trailing" constant="16" id="ka3-m8-1Dn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zia-KD-O3d" secondAttribute="bottom" id="0Gw-Ca-pUh"/>
+                            <constraint firstItem="4ga-JR-sOO" firstAttribute="centerY" secondItem="r4G-Oj-ika" secondAttribute="centerY" id="4Ne-1P-2eB"/>
+                            <constraint firstItem="4ga-JR-sOO" firstAttribute="centerX" secondItem="r4G-Oj-ika" secondAttribute="centerX" id="X7R-pb-fa3"/>
+                            <constraint firstAttribute="trailing" secondItem="zia-KD-O3d" secondAttribute="trailing" id="qPW-Rc-sji"/>
+                            <constraint firstItem="zia-KD-O3d" firstAttribute="leading" secondItem="r4G-Oj-ika" secondAttribute="leading" id="sjw-B8-1Gg"/>
+                            <constraint firstItem="zia-KD-O3d" firstAttribute="top" secondItem="r4G-Oj-ika" secondAttribute="top" id="wAL-Uh-oM5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wzf-Ma-PTz"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="yrc-e4-8mi" id="0jb-Y8-wAq"/>
+                        <outlet property="alertView" destination="4ga-JR-sOO" id="013-Ej-rcJ"/>
+                        <outlet property="backgroundView" destination="zia-KD-O3d" id="A5G-J5-TaU"/>
+                        <outlet property="loadingLabel" destination="Qmq-DV-kZP" id="Vs1-Kf-dP5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9d-W8-440" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
